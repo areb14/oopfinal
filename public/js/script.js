@@ -1,0 +1,17 @@
+
+const togglePassword = document.getElementById('togglePassword');
+const passwordInput = document.getElementById('password');
+
+if (togglePassword && passwordInput) {
+    togglePassword.addEventListener('click', function () {
+
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            togglePassword.textContent = 'Hide';
+        } else {
+            passwordInput.type = 'password';
+            togglePassword.textContent = 'Show';
+        }
+
+    });
+}
