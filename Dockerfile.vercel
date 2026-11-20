@@ -4,7 +4,7 @@ FROM php:8.3-apache
 RUN apt-get update && apt-get install -y \
     git unzip zip curl libzip-dev libicu-dev libpng-dev \
     libonig-dev libsqlite3-dev \
-    && docker-php-ext-install pdo pdo_sqlite mbstring bcmath gd intl zip \
+   && docker-php-ext-install pdo_sqlite bcmath gd intl zip \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
