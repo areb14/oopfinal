@@ -1,19 +1,5 @@
 
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "services": {
-    "studentportal": {
-      "root": ".",
-      "entrypoint": "Dockerfile.vercel",
-      "runtime": "container"
-    }
-  },
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": {
-        "service": "studentportal"
-      }
-    }
-  ]
+  "framework": "container"
 }
